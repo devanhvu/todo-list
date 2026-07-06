@@ -32,8 +32,7 @@ async function startServer() {
 
   // ── Middlewares ────────────────────────────────────────────────
   app.use(cors({
-    //origin: ['http://localhost:5173', 'http://localhost:4173', 'http://localhost:3000'],
-    origin: "*",
+    origin: ['http://localhost:5173', 'http://localhost:4173', 'http://localhost:3000', 'https://todo-frontend-oz99.onrender.com'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type'],
   }));
