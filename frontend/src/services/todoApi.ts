@@ -1,6 +1,8 @@
-import type { Todo, TodoFilters, Pagination, TodoStats, FormData } from '../types.ts';
+import type { Todo, TodoFilters, Pagination, TodoStats, FormData, } from '../types.ts';
 
-const BASE = '/api';
+// const BASE = '/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+const BASE = `${API_URL}/api`;
 
 /** Throws an Error with the server's error message if response is not ok */
 async function handleResponse<T>(res: Response): Promise<T> {
